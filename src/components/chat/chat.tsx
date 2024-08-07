@@ -31,8 +31,8 @@ export const Chat = (props: { agent: string }) => {
       </form>
       <section className={styles.Chat__messages}>
         {messages
-          .filter(m => m.role !== 'system')
-          .map(m => {
+          .filter((m: any) => m.role !== 'system')
+          .map((m: any) => {
             return (
               <span key={m.id} className={styles.Chat__message}>
                 <div className={styles.Chat__message__icon}>

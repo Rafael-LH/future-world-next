@@ -13,7 +13,7 @@ export const ProductViewItemsOrder = ({ maxQuantity, product }: ProductViewItems
   const [counter, setCounter] = useState(1);
   const {addToCart} = useShoppingCart();
 
-  const handleAddToCart = (event) => {
+  const handleAddToCart = (event: { preventDefault: () => void; }) => {
     event.preventDefault()
     addToCart({
       title: product.title,

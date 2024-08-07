@@ -1,7 +1,7 @@
 import { env } from "app/config/env"
 import { shopifyURLS } from "./urls"
 
-export const getProducts = async (id?: string): Promise<ProductType []> => {
+export const getProducts = async (id?: string) => {
   try {
     const apiURL = id ? `${shopifyURLS.products.all}?ids=${id}` : shopifyURLS.products.all
     const response = await fetch(apiURL, {

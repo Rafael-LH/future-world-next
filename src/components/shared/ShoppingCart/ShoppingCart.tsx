@@ -50,7 +50,7 @@ export default function ShoppingCart() {
       {isOpen && hasItems && (
         <div className={styles.ShoppingCart__items} >
           {
-            cart.map(item => (<ShoppingCartItem key={item.id} item={item} />))
+            cart.map((item: any) => (<ShoppingCartItem key={item.id} item={item} />))
           }
           <button className={styles.ShoppingCart__buyButton} disabled={isBuying} onClick={handleBuy}>
             Buy

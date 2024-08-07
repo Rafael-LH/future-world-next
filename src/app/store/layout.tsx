@@ -15,7 +15,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
       <nav>
         <ul className={styles.StoreLayout__list}>
           {
-            collections.map((collection) => (
+            collections.map((collection: any) => (
               <Link key={collection.id} href={'/store/' + collection.handle} className={styles.StoreLayout__chip}>
                 {collection.title}
               </Link>
